@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Projects_Course_2.iml" filepath="$PROJECT_DIR$/.idea/Projects_Course_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex1curs2/ex1-curs2.iml" filepath="$PROJECT_DIR$/ex1curs2/ex1-curs2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex2curs2/ex2-curs2.iml" filepath="$PROJECT_DIR$/ex2curs2/ex2-curs2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex3curs2/ex3-curs2.iml" filepath="$PROJECT_DIR$/ex3curs2/ex3-curs2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ex4curs2/ex4-curs2.iml" filepath="$PROJECT_DIR$/ex4curs2/ex4-curs2.iml" />
+    </modules>
+  </component>
+</project>

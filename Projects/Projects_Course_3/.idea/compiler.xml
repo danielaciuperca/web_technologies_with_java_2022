@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ex1-curs3" />
+        <module name="ex2curs3" />
+        <module name="ex3curs3" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ex1-curs3" target="17" />
+      <module name="ex2curs3" target="17" />
+      <module name="ex3curs3" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

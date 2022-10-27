@@ -25,11 +25,11 @@ n
 >ex3curs2/src/main/java/configuration/ProjectConfiguration.java,b\6\b67ba4968339a2031325e1abbe6342b858c49a69
 W
 'ex3curs2/src/main/java/Application.java,f\e\fe68883be27a2dda8f59431f138ad9822acdd886
-]
--ex4curs2/src/main/java/musicstore/Artist.java,9\4\94ace858d40a7401cfaf48fabe8a433fb78c72a8
 \
 ,ex4curs2/src/main/java/musicstore/Album.java,5\c\5cea593c5a6fe3155af04b72a512bfd7140507a8
 W
 'ex4curs2/src/main/java/Application.java,1\1\11da3e6f51e7d632701e703534ff5b206212260c
 n
 >ex4curs2/src/main/java/configuration/ProjectConfiguration.java,c\9\c9ccedeef3397ba0b916622e9aced45c8d4172f9
+]
+-ex4curs2/src/main/java/musicstore/Artist.java,9\4\94ace858d40a7401cfaf48fabe8a433fb78c72a8

@@ -10,6 +10,7 @@ import java.util.*;
 
 @Service
 public class DestinationService {
+
     private DestinationRepository destinationRepository;
 
     public DestinationService(DestinationRepository destinationRepository) {

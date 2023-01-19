@@ -18,6 +18,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(controllers = DestinationController.class) //this tells Spring Boot to auto-configure a Spring web context
                                                 // for integration tests for the DestinationController class
 public class DestinationControllerIT {
+
     @Autowired
     private MockMvc mockMvc;
     @Autowired

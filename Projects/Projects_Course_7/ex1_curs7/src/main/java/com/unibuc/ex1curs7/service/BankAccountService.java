@@ -25,7 +25,9 @@ public class BankAccountService {
     public Optional<BankAccount> getBy(String id) {
         Optional<BankAccount> bankAccount = bankAccountRepository.getBy(id);
         if(bankAccount.isEmpty()) {
-            throw new BankAccountNotFoundException("Bank account with id " + id + "attempted to be retrieved");
+            throw new BankAccountNotFoundException(
+                    "Bank account with id " + id + 
+                            " attempted to be retrieved, but was not found.");
         }
         return bankAccount;
     }

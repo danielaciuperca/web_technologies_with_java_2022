@@ -1,5 +1,7 @@
 package com.unibuc.ex1curs7.controller;
 
+import com.unibuc.ex1curs7.dto.BankAccountCreateRequest;
+import com.unibuc.ex1curs7.mapper.BankAccountMapper;
 import com.unibuc.ex1curs7.model.BankAccount;
 import com.unibuc.ex1curs7.model.BankAccountType;
 import com.unibuc.ex1curs7.service.BankAccountService;
@@ -17,24 +19,28 @@ import java.util.Optional;
 public class BankAccountController {
 
     private final BankAccountService bankAccountService;
+    private final BankAccountMapper bankAccountMapper;
 
-    @Autowired // implied
-    public BankAccountController(BankAccountService bankAccountService) {
+    @Autowired
+    public BankAccountController(BankAccountService bankAccountService,
+                                 BankAccountMapper bankAccountMapper) {
         this.bankAccountService = bankAccountService;
+        this.bankAccountMapper = bankAccountMapper;
     }
 
     @PostMapping
-    public ResponseEntity<BankAccount> create(@RequestBody @Valid BankAccount bankAccount) {
-        //TODO Wrap the request's body into a wrapper class (e.g. BankAccountRequest.class)
-        //TODO   and use the wrapper class to validate input and map it to the model (BankAccount.class)
-        BankAccount createdBankAccount = bankAccountService.create(bankAccount);
+    public ResponseEntity<BankAccount> create(@RequestBody @Valid
+                                                  BankAccountCreateRequest bankAccountCreateRequest) {
+        BankAccount createdBankAccount = bankAccountService.create(
+                bankAccountMapper.createRequestToModel(bankAccountCreateRequest)
+        );
         return ResponseEntity
                 .created(URI.create("/bankAccounts/" + createdBankAccount.getId()))
                 .body(createdBankAccount);
     }
 
     @GetMapping("/{id}")
-    public Optional<BankAccount> getBy(@PathVariable String id) { //same as @PathVariable(name = "id") String bankAccountId
+    public Optional<BankAccount> getBy(@PathVariable String id) {
         Optional<BankAccount> bankAccount = bankAccountService.getBy(id);
         return bankAccount;
     }
@@ -44,12 +50,4 @@ public class BankAccountController {
                                    @RequestParam(required = false) Double balance) {
         return bankAccountService.getBy(type, balance);
     }
-
-    //Moved method to ControllerAdvice to reuse it for multiple controllers
-    /*@ExceptionHandler
-    public ResponseEntity<String> handle(IllegalStateException exception) {
-
-        return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(exception.getMessage() + " at " + LocalDateTime.now());
-    }*/
 }

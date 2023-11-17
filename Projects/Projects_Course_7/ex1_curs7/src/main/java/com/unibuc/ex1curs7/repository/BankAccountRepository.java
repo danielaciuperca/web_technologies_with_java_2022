@@ -21,10 +21,9 @@ public class BankAccountRepository {
     }
 
     public Optional<BankAccount> getBy(String id) {
-        Optional<BankAccount> bankAccountOptional = bankAccounts.stream()
+        return bankAccounts.stream()
                 .filter(bankAccount -> bankAccount.getId().equals(id))
                 .findFirst();
-        return bankAccountOptional;
     }
 
     public List<BankAccount> getBy(BankAccountType type, Double balance) {
